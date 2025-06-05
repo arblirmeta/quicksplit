@@ -81,7 +81,7 @@ Hier ist ein Überblick über die wichtigsten Dateien und Ordner in unserem Proj
 -database.py: Datenbankmodelle und Verbindung
 
 
-*routes/:* Controller-Logik
+**routes/:** Controller-Logik
 
 -events.py: Event-Verwaltung + Schuldenberechnung
 
@@ -92,12 +92,12 @@ Hier ist ein Überblick über die wichtigsten Dateien und Ordner in unserem Proj
 -auth.py: Admin-Login
 
 
-*api/:* API-Endpunkte
+**api/:** API-Endpunkte
 
 -endpoints.py: JSON-API für Event-Zusammenfassung
 
 
-*templates/:* HTML-Templates
+**templates/:** HTML-Templates
 
 -base.html: Basis-Layout
 
@@ -115,7 +115,7 @@ Hier ist ein Überblick über die wichtigsten Dateien und Ordner in unserem Proj
 
 
 
-*static/:* CSS und andere statische Dateien
+**static/:** CSS und andere statische Dateien
 
 -style.css: Unsere CSS-Anpassungen
 
