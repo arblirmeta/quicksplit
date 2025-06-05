@@ -23,7 +23,7 @@ Für QuickSplit Light haben wir ein einfaches aber effektives Datenmodell entwic
 
 # ER-Diagramm
 
-![ER-Diagramm](assets/images/datenmodel.png)
+![ER-Diagramm](../assets/images/datenmodel.png)
 
 
 **Admin**
