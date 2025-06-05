@@ -23,51 +23,10 @@ Für QuickSplit Light haben wir ein einfaches aber effektives Datenmodell entwic
 
 # ER-Diagramm
 
-erDiagram
-    Admin {
-        int id PK
-        string username
-        string password_hash
-        datetime created_at
-    }
-    
-    Event {
-        int id PK
-        string name
-        datetime created_at
-        int admin_id FK
-    }
-    
-    User {
-        int id PK
-        string name
-        int event_id FK
-    }
-    
-    Expense {
-        int id PK
-        string title
-        float amount
-        datetime date
-        int payer_id FK
-        int event_id FK
-    }
-    
-    ExpenseParticipant {
-        int expense_id PK,FK
-        int user_id PK,FK
-    }
-    
-    Admin ||--o{ Event : "erstellt"
-    Event ||--o{ User : "hat"
-    Event ||--o{ Expense : "enthält"
-    User ||--o{ Expense : "zahlt"
-    Expense }o--o{ User : "beteiligt"
-    ExpenseParticipant }|--|| Expense : "gehört zu"
-    ExpenseParticipant }|--|| User : "betrifft"
+![ER-Diagramm](assets/images/datenmodel.png)
 
 
-*Admin*
+**Admin**
 
 Die Admin-Tabelle speichert Informationen über Benutzer, die sich anmelden und Events erstellen können:
 
@@ -81,7 +40,7 @@ Die Admin-Tabelle speichert Informationen über Benutzer, die sich anmelden und 
 
 Ein Admin kann mehrere Events erstellen.
 
-*Event*
+**Event**
 
 Events sind die Hauptorganisationseinheiten in unserer App:
 
@@ -95,7 +54,7 @@ Events sind die Hauptorganisationseinheiten in unserer App:
 
 Ein Event kann mehrere Benutzer und Ausgaben haben.
 
-*User*
+**User**
 
 User sind die Teilnehmer eines Events:
 
@@ -107,7 +66,7 @@ User sind die Teilnehmer eines Events:
 
 Ein Benutzer gehört zu genau einem Event und kann mehrere Ausgaben bezahlen oder an Ausgaben beteiligt sein.
 
-*Expense*
+**Expense**
 
 Expenses sind die Ausgaben innerhalb eines Events:
 
@@ -125,7 +84,7 @@ Expenses sind die Ausgaben innerhalb eines Events:
 
 Eine Ausgabe gehört zu genau einem Event, hat genau einen Zahler und kann mehrere beteiligte Personen haben.
 
-*ExpenseParticipant*
+**ExpenseParticipant**
 
 Diese Tabelle ist eine Verknüpfungstabelle, die die Viele-zu-viele-Beziehung zwischen Ausgaben und beteiligten Benutzern abbildet:
 
