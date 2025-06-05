@@ -3,29 +3,25 @@ title: Home
 nav_order: 0
 ---
 
-{: .attention }
-> Any text enclosed by `[ ]` are placeholders, including the opening and closing brackets.
->
-> You may delete this `attention` box.
 
-# [Project Name]
+# Quicksplit
 
-[Project description]
+**QuickSplit** ist eine schlanke Web-Anwendung, die es Gruppen (z. B. WGs, Reiseteams, Freundeskreise) ermöglicht, gemeinsame Ausgaben innerhalb eines Ereignisses (Event) zu erfassen und automatisch fair aufzuteilen.
 
 ## Team members
 
-### [Jane Dane]
+### Arblir Meta
 
 About
-: Some info about Jane
+: Arblir übernimmt das Backend und die Datenbank. Er baut mit Flask und SQLite alle nötigen Funktionen, damit man Ausgaben anlegen, bearbeiten und löschen kann. In der Dokumentation erklärt Arblir das Datenmodell und zeigt im ER-Diagramm, wie die Tabellen zusammenhängen.
 
 Matr.-Nr.
-: 1234567
+: 77212022714
 
-### [Joe Doe]
+### Mohamed Shiref
 
 About
-: Some info about Joe
+: Mohamed kümmert sich um das Design der Benutzeroberfläche. Er erstellt mit Jinja2-Templates und Bootstrap 5 ein übersichtliches Layout und sorgt dafür, dass alles auf verschiedenen Geräten gut aussieht. Außerdem plant er den Aufbau der Dokumentation und schreibt die Value Proposition, damit klar wird, welches Problem QuickSplit Light löst und wie man die App benutzt.
 
 Matr.-Nr.
 : 1234567

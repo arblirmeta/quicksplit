@@ -4,7 +4,7 @@ nav_order: 1
 ---
 
 {: .label }
-[Jane Dane]
+Arblir Meta
 
 {: .no_toc }
 # Value proposition
@@ -18,15 +18,20 @@ nav_order: 1
 
 ## The problem
 
-[Describe which problem your application tackles and why it is relevant.]
+In Gruppen zahlt oft eine Person für mehrere. Am Ende entsteht Chaos:
+Wer schuldet wem wie viel? Man verliert schnell den Überblick –
+besonders auf Reisen oder Events.
 
 ## Our solution
 
-[Describe why and how your app solves the stated problem. Don't over-promise: the description should match what your app actually delivers.]
+QuickSplit ist eine schlanke Web-App zur fairen Abrechnung
+gemeinsamer Ausgaben. Mit Anmeldung, ohne Schnickschnack – einfach
+Zahlungen eintragen und automatisch berechnen, wer wie viel
+zurückbekommt
 
 ## Target user
-
-[Scope your target user(s), e.g., with the help of personas.]
+-Reisegruppen
+-Freundeskreise bei gemeinsamen Aktivitäten
 
 ## Customer journey
 
