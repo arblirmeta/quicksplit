@@ -33,11 +33,11 @@ Arblir Meta, Mohamed Shiref
 
 ## Overview
 
-QuickSplit Light ist eine Flask-basierte Webanwendung zur Verwaltung und fairen Aufteilung von Gruppenausgaben. Die Anwendung ermöglicht es Administratoren, Events zu erstellen und zu verwalten, während Benutzer innerhalb dieser Events Ausgaben erfassen und automatisch berechnen können, wer wem wie viel Geld schuldet.
+QuickSplit ist eine Flask-basierte Webanwendung zur Verwaltung und fairen Aufteilung von Gruppenausgaben. Die Anwendung ermöglicht es Administratoren, Events zu erstellen und zu verwalten, während Benutzer innerhalb dieser Events Ausgaben erfassen und automatisch berechnen können, wer wem wie viel Geld schuldet.
 
 Die Architektur folgt dem Model-View-Controller (MVC) Muster:
 
--Model: SQLAlchemy-Datenbankmodelle für Events, Benutzer und Ausgaben
+-Model: Die Daten werden in einer lokalen SQLite-Datenbank gespeichert.
 
 -View: Jinja2-Templates mit Bootstrap 5 für das Frontend
 
