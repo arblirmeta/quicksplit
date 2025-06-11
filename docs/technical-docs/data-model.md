@@ -19,7 +19,7 @@ nav_order: 2
 
 # Übersicht
 
-Für QuickSplit Light haben wir ein einfaches aber effektives Datenmodell entwickelt. Wir brauchten eine Struktur, die Events, Benutzer und Ausgaben speichern kann und gleichzeitig die Beziehungen zwischen ihnen abbildet.
+Für QuickSplit haben wir ein einfaches aber effektives Datenmodell entwickelt. Wir brauchten eine Struktur, die Events, Benutzer und Ausgaben speichern kann und gleichzeitig die Beziehungen zwischen ihnen abbildet.
 
 # ER-Diagramm
 
