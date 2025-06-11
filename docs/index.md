@@ -24,7 +24,7 @@ About
 : Mohamed kümmert sich um das Design der Benutzeroberfläche. Er erstellt mit Jinja2-Templates und Bootstrap 5 ein übersichtliches Layout und sorgt dafür, dass alles auf verschiedenen Geräten gut aussieht. Außerdem plant er den Aufbau der Dokumentation und schreibt die Value Proposition, damit klar wird, welches Problem QuickSplit Light löst und wie man die App benutzt.
 
 Matr.-Nr.
-: 1234567
+: 77211928822
 
 ## Eidesstattliche Erklärung
 
