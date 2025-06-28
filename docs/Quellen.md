@@ -41,7 +41,7 @@ Hier sammeln wir alle Sachen die wir gegoogelt haben beim Programmieren.
 - [Flask Dokumentation](https://flask.palletsprojects.com/en/2.0.x/) - für url_for() und Templates
 
 **Template Problems:**
-- [Jinja2 Syntax](https://jinja.palletsprojects.com/en/3.0.x/templates/) - {% extends %} und {% block %} Syntax
+- [Jinja2 Syntax](https://jinja.palletsprojects.com/en/3.0.x/templates/) - `{% extends %}` und `{% block %}` Syntax
 - [Stack Overflow: Flask static files](https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask) - CSS Datei wurde nicht geladen
 - [Flask url_for()](https://stackoverflow.com/questions/7478366/create-dynamic-urls-in-flask-with-url-for) - url_for('static') für CSS
 
