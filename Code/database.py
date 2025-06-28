@@ -1,21 +1,26 @@
 import sqlite3
 import os
 
+# SQLite Tutorial von: https://docs.python.org/3/library/sqlite3.html
+# Flask + SQLite von: https://flask.palletsprojects.com/en/2.0.x/patterns/sqlite3/
+
 # Datenbankdatei im gleichen Ordner wie das Script
 DATABASE = 'quicksplit.db'
 
 def get_db_connection():
     """Verbindung zur SQLite Datenbank herstellen"""
-    # Stellt eine Verbindung zur Datenbank her
     conn = sqlite3.connect(DATABASE)
-    conn.row_factory = sqlite3.Row  # Das macht es einfacher mit den Daten zu arbeiten
+    # row_factory Trick von Flask SQLite Tutorial - macht Ergebnisse einfacher
+    conn.row_factory = sqlite3.Row  
     return conn
 
 def init_database():
     """Erstellt alle nötigen Tabellen wenn sie noch nicht existieren"""
+    # SQL CREATE TABLE Syntax von w3schools.com/sql/sql_create_table.asp
     conn = get_db_connection()
     
     # Tabelle für Events erstellen
+    # FOREIGN KEY Syntax von sqlite.org/foreignkeys.html
     conn.execute('''
         CREATE TABLE IF NOT EXISTS events (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -48,7 +53,8 @@ def init_database():
         )
     ''')
     
-    # Tabelle für ExpenseParticipants erstellen (wer war bei welcher Ausgabe dabei)
+    # Many-to-Many Relationship - von Database Design Tutorial
+    # Composite Primary Key von sqlite.org/lang_createtable.html
     conn.execute('''
         CREATE TABLE IF NOT EXISTS expense_participants (
             expense_id INTEGER NOT NULL,
@@ -63,6 +69,6 @@ def init_database():
     conn.close()
     print("Datenbank wurde initialisiert!")
 
-# Wenn das Script direkt ausgeführt wird, Datenbank initialisieren
+# if __name__ == '__main__' Trick von Python Best Practices
 if __name__ == '__main__':
     init_database()

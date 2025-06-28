@@ -4,7 +4,7 @@ nav_order: 3
 ---
 
 {: .label }
-[Jane Dane]
+Arblir Meta & Mohamed Shiref
 
 {: .no_toc }
 # Design decisions
@@ -16,31 +16,7 @@ nav_order: 3
 {: toc }
 </details>
 
-## 01: [Title]
-
-### Meta
-
-Status
-: **Work in progress** - Decided - Obsolete
-
-Updated
-: DD-MMM-YYYY
-
-### Problem statement
-
-[Describe the problem to be solved or the goal to be achieved. Include relevant context information.]
-
-### Decision
-
-[Describe **which** design decision was taken for **what reason** and by **whom**.]
-
-### Regarded options
-
-[Describe any possible design decision that will solve the problem. Assess these options, e.g., via a simple pro/con list.]
-
----
-
-## [Example, delete this section] 01: How to access the database - SQL or SQLAlchemy 
+## 01: SQLite vs. andere Datenbanken
 
 ### Meta
 
@@ -48,45 +24,95 @@ Status
 : Work in progress - **Decided** - Obsolete
 
 Updated
-: 30-Jun-2024
+: 27-Nov-2024
 
 ### Problem statement
 
-Should we perform database CRUD (create, read, update, delete) operations by writing plain SQL or by using SQLAlchemy as object-relational mapper?
+Welche Datenbank sollen wir für QuickSplit verwenden? Wir brauchen eine Lösung, die Events, Users und Expenses speichern kann und einfach zu implementieren ist.
 
-Our web application is written in Python with Flask and connects to an SQLite database. To complete the current project, this setup is sufficient.
-
-We intend to scale up the application later on, since we see substantial business value in it.
-
-
-
-Therefore, we will likely:
-Therefore, we will likely:
-Therefore, we will likely:
-
-+ Change the database schema multiple times along the way, and
-+ Switch to a more capable database system at some point.
+Als Studenten haben wir begrenzte Erfahrung mit Datenbanken und wollen uns auf die App-Logik konzentrieren.
 
 ### Decision
 
-We stick with plain SQL.
+Wir verwenden **SQLite** mit plain SQL (kein ORM).
 
-Our team still has to come to grips with various technologies new to us, like Python and CSS. Adding another element to our stack will slow us down at the moment.
+SQLite ist perfekt für unseren Prototyp, da es keine Installation erfordert und direkt mit Python funktioniert. Plain SQL gibt uns volle Kontrolle und ist einfacher zu verstehen als SQLAlchemy.
 
-Also, it is likely we will completely re-write the app after MVP validation. This will create the opportunity to revise tech choices in roughly 4-6 months from now.
-*Decision was taken by:* github.com/joe, github.com/jane, github.com/maxi
+*Decision was taken by:* Arblir Meta, Mohamed Shiref
 
 ### Regarded options
 
-We regarded two alternative options:
+| Criterion | SQLite | MySQL | PostgreSQL | SQLAlchemy |
+| --- | --- | --- | --- | --- |
+| **Setup Aufwand** | ✔️ Keine Installation | ❌ Server Setup | ❌ Server Setup | ❔ Zusätzliche Abstraktionsschicht |
+| **Lernkurve** | ✔️ Einfaches SQL | ❌ Komplex | ❌ Komplex | ❌ ORM Konzepte lernen |
+| **Prototyp geeignet** | ✔️ Perfekt | ❌ Overkill | ❌ Overkill | ❔ Zu abstrakt |
+| **File-basiert** | ✔️ Eine Datei | ❌ Server nötig | ❌ Server nötig | ❔ Abhängig |
 
-+ Plain SQL
-+ SQLAlchemy
+---
 
-| Criterion | Plain SQL | SQLAlchemy |
-| --- | --- | --- |
-| **Know-how** | ✔️ We know how to write SQL | ❌ We must learn ORM concept & SQLAlchemy |
-| **Change DB schema** | ❌ SQL scattered across code | ❔ Good: classes, bad: need Alembic on top |
-| **Switch DB engine** | ❌ Different SQL dialect | ✔️ Abstracts away DB engine |
+## 02: Bootstrap vs. eigenes CSS
+
+### Meta
+
+Status
+: Work in progress - **Decided** - Obsolete
+
+Updated
+: 28-Nov-2024
+
+### Problem statement
+
+Wie sollen wir das Frontend gestalten? Wir wollen ein modernes, responsives Design, haben aber begrenzte CSS-Erfahrung.
+
+### Decision
+
+Wir verwenden **Bootstrap 5** als CSS Framework.
+
+Bootstrap gibt uns sofort ein professionelles Aussehen und responsive Design. Das Grid-System und die vorgefertigten Komponenten sparen uns viel Zeit.
+
+*Decision was taken by:* Mohamed Shiref, Arblir Meta
+
+### Regarded options
+
+| Criterion | Bootstrap 5 | Pure CSS | Tailwind CSS |
+| --- | --- | --- | --- |
+| **Lernaufwand** | ✔️ Klassen verwenden | ❌ CSS von Grund auf | ❌ Utility-First lernen |
+| **Geschwindigkeit** | ✔️ Schnell | ❌ Langsam | ❔ Mittel |
+| **Responsive** | ✔️ Automatisch | ❌ Selbst machen | ✔️ Automatisch |
+| **Dokumentation** | ✔️ Excellent | ❔ MDN/W3Schools | ✔️ Gut |
+
+---
+
+## 03: Flask Templates vs. Single Page App
+
+### Meta
+
+Status
+: Work in progress - **Decided** - Obsolete
+
+Updated
+: 28-Nov-2024
+
+### Problem statement
+
+Sollen wir Server-side Rendering mit Flask Templates oder eine Single Page Application (SPA) mit JavaScript Framework bauen?
+
+### Decision
+
+Wir verwenden **Flask Templates mit Jinja2**.
+
+Für unseren Prototyp ist Server-side Rendering einfacher. Wir können uns auf die Backend-Logik konzentrieren und müssen kein zusätzliches JavaScript Framework lernen.
+
+*Decision was taken by:* Arblir Meta, Mohamed Shiref
+
+### Regarded options
+
+| Criterion | Flask Templates | React SPA | Vue.js SPA |
+| --- | --- | --- | --- |
+| **Komplexität** | ✔️ Einfach | ❌ Zusätzliches Framework | ❌ Zusätzliches Framework |
+| **Lernkurve** | ✔️ Jinja2 ähnlich HTML | ❌ React Konzepte | ❌ Vue Konzepte |
+| **Prototyp Speed** | ✔️ Schnell | ❌ Mehr Setup | ❌ Mehr Setup |
+| **Backend Integration** | ✔️ Direkt | ❌ API nötig | ❌ API nötig |
 
 ---

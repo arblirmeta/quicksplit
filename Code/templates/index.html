@@ -1,12 +1,60 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>QuickSplit</title>
-</head>
-<body>
-    <h1>QuickSplit - Datenbanktest</h1>
-    <p>Datenbank wurde initialisiert. Tabellen sollten erstellt worden sein.</p>
-    <p>Nächster Schritt: Templates und Routes hinzufügen.</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}QuickSplit - Startseite{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron bg-light p-5 rounded">
+            <h1 class="display-4">👋 Willkommen bei QuickSplit</h1>
+            <p class="lead">Faire Aufteilung von Gruppenausgaben - einfach gemacht!</p>
+            <hr class="my-4">
+            <p>Erstelle Events, füge Teilnehmer hinzu und erfasse Ausgaben. QuickSplit berechnet automatisch, wer wem was schuldet.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">📅 Events erstellen</h5>
+                <p class="card-text">Erstelle ein neues Event für eure Gruppe (Urlaub, WG-Kosten, etc.)</p>
+                <button class="btn btn-primary" disabled>Bald verfügbar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">👥 Teilnehmer verwalten</h5>
+                <p class="card-text">Füge Freunde zu deinem Event hinzu</p>
+                <button class="btn btn-secondary" disabled>Bald verfügbar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">💰 Ausgaben erfassen</h5>
+                <p class="card-text">Trage Ausgaben ein und lass die App berechnen</p>
+                <button class="btn btn-success" disabled>Bald verfügbar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12">
+        <h3>🚀 Nächste Schritte:</h3>
+        <ol>
+            <li>Event-Erstellung implementieren</li>
+            <li>Teilnehmer-Management</li>
+            <li>Ausgaben-System</li>
+            <li>Schulden-Berechnung</li>
+        </ol>
+    </div>
+</div>
+{% endblock %}
