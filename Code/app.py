@@ -1,7 +1,14 @@
 from flask import Flask, render_template
 from database import init_database
+from routes.events import events_bp
 
 app = Flask(__name__)
+
+# Secret Key für Flash Messages - von Flask Tutorial
+app.secret_key = 'quicksplit-secret-key-2024'
+
+# Event Blueprint registrieren
+app.register_blueprint(events_bp)
 
 # Datenbank beim Start initialisieren
 init_database()

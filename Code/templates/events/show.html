@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}{{ event.name }}{% endblock %}
+
+{% block content %}
+<h2>{{ event.name }}</h2>
+<p>Erstellt am: {{ event.created_at }}</p>
+
+<a href="{{ url_for('events.list_events') }}" class="btn btn-secondary">Zurück zu Events</a>
+
+<br><br>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Teilnehmer</h5>
+      </div>
+      <div class="card-body">
+        {% if users %}
+          <ul>
+            {% for user in users %}
+            <li>{{ user.name }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>Noch keine Teilnehmer</p>
+        {% endif %}
+        <button class="btn btn-primary btn-sm" disabled>Teilnehmer hinzufügen</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Ausgaben</h5>
+      </div>
+      <div class="card-body">
+        <p>Noch keine Ausgaben</p>
+        <button class="btn btn-success btn-sm" disabled>Ausgabe hinzufügen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="alert alert-info">
+  <h5>Nächste Schritte:</h5>
+  <ol>
+    <li>Teilnehmer hinzufügen</li>
+    <li>Ausgaben eintragen</li>
+    <li>Schulden berechnen lassen</li>
+  </ol>
+  <small>Diese Features kommen noch...</small>
+</div>
+{% endblock %} 
